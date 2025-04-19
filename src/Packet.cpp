@@ -1,6 +1,5 @@
-#include "pch.h"
-
-#include "Packet.h"
+#include "pch.hpp"
+#include "Packet.hpp"
 
 //string getName() {
     //return name;
@@ -35,7 +34,7 @@ void Packet::printPacket(bool debug) {
     pck_type = (packetType == e_PacketType::SENDED) ? "send" : "recv";
 
     // print hexadecimal packet ID
-    std::cout << pck_type << ": 0x" << std::hex << std::setw(2) << std::setfill('0') << ID << "\t";
+    std::cout << pck_type << ": 0x" << std::hex << std::setw(4) << std::setfill('0') << ID << "\t";
     std::cout << std::dec;
 
     // print length
